@@ -4,8 +4,9 @@ import mongoose from "mongoose";
 import userRouter from "./routes/userRouter.js";
 import productRouter from "./routes/productRouter.js";
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
 
-let app = express();
+const app = express();
 
 app.use(bodyParser.json());
 app.use((req, res, next) => {
