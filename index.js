@@ -25,7 +25,8 @@ app.use((req, res, next) => {
   next();
 });
 
-let mongoUrl = process.env.MONGO_URL;
+let mongoUrl =
+  "mongodb+srv://admin:123@cluster0.6ubd6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose.connect(mongoUrl);
 
