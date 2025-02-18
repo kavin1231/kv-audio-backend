@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
-  key:{
+  key: {
     type: String,
     required: true,
-    unique:true,
+    unique: true,
   },
   name: {
     type: String,
@@ -17,7 +17,7 @@ const productSchema = new mongoose.Schema({
   category: {
     type: Number,
     required: true,
-    default:"uncategorized"
+    default: "uncategorized",
   },
   dimensions: {
     type: Number,
@@ -30,7 +30,7 @@ const productSchema = new mongoose.Schema({
   availability: {
     type: Number,
     required: true,
-    default:true,
+    default: true,
   },
 });
 const Product = mongoose.model("Product", productSchema);
