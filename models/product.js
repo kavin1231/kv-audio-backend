@@ -32,6 +32,12 @@ const productSchema = new mongoose.Schema({
     required: true,
     default: true,
   },
+  Image: {
+    type: [String],
+    required: true,
+    default:
+      "https://static.vecteezy.com/system/resources/previews/017/054/078/original/headphones-design-3d-rendering-for-product-mockup-free-png.png",
+  },
 });
 const Product = mongoose.model("Product", productSchema);
 

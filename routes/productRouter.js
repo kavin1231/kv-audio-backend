@@ -13,6 +13,6 @@ productRouter.post("/", addProduct);
 productRouter.get("/", getProducts);
 
 productRouter.put("/:key", updateProduct);
-productRouter.put("/:key", deleteProduct);
+productRouter.delete("/:key", deleteProduct);
 
 export default productRouter;
