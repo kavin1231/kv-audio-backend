@@ -4,6 +4,7 @@ import { isItCustomer } from "./userController.js";
 export async function addInquiry(req, res) {
   try {
     if (isItCustomer(req)) {
+      console.log(req.user);
       const data = req.body;
       data.email = req.user.email;
       data.phone = req.user.phone;
@@ -26,7 +27,7 @@ export async function addInquiry(req, res) {
 
       res.json({
         message: "Inquiry added successfully",
-        id: response.id,
+        id: response.id
       });
     }
   } catch (e) {
