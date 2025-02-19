@@ -45,6 +45,7 @@ export function loginUser(req, res) {
             email: user.email,
             role: user.role,
             profilePicture: user.profilePicture,
+            phone: user.phone,
           },
           process.env.JWT_SECRET
         );
